@@ -27,3 +27,5 @@ def automodeling_pipeline(
 
 if __name__ == "__main__":
     automodeling_pipeline(parsing_doc="Axa_Contract1.pdf")
+    # can create other pipelines and cascade them by having the output of 
+    # first pipeline to be the the input of second pipeline

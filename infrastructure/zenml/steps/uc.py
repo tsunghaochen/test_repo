@@ -1,5 +1,3 @@
-import sys
-import os
 from zenml import step
 from zenml.logger import get_logger
 from apps.uc_pipeline.uc import my_use_case

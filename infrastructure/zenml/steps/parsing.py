@@ -1,5 +1,3 @@
-import sys
-import os
 from zenml import step
 from zenml.logger import get_logger
 from apps.parsing_pipeline.parser  import my_parser
