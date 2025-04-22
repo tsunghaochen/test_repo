@@ -1,2 +1,2 @@
 # test_repo
-test git pull
+Create mock repo strcutrue and apply `zenml` codes accordingly

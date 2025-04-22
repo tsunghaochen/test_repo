@@ -4,7 +4,7 @@ from apps.graph_gen_pipeline.graph_gen  import my_knowledge_graph_gen
 
 logger = get_logger(__name__)
 
-@step
+@step(enable_cache=False)
 def graph_gen_pipe(graph_gen: str) -> str:
     knowlege_graph = my_knowledge_graph_gen(graph_gen)
     return knowlege_graph

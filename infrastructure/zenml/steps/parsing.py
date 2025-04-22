@@ -4,7 +4,7 @@ from apps.parsing_pipeline.parser  import my_parser
 
 logger = get_logger(__name__)
 
-@step
+@step(enable_cache=False)
 def parsing_pipe(parsing_doc: str) -> str:
     parsed_data = my_parser(parsing_doc)
     return parsed_data
