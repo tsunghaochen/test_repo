@@ -8,11 +8,10 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "mlflow (>=2.21.3,<3.0.0)",
     "zenml (==0.74.0)",
     "pip-system-certs (>=4.0,<5.0)"
 ]
-python=">=3.12,<3.13"
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
