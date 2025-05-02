@@ -1,6 +1,6 @@
 from zenml import step
 from zenml.logger import get_logger
-from apps.validation_pipeline.validation import my_validation
+from .apps.validation_pipeline.validation import my_validation
 
 logger = get_logger(__name__)
 

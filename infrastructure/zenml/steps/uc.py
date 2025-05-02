@@ -1,8 +1,13 @@
 from zenml import step
 from zenml.logger import get_logger
-from apps.uc_pipeline.uc import my_use_case
+from .apps.uc_pipeline.uc import my_use_case
+# import os
+# import urllib3
 import mlflow
 
+# # monkey patch to avoid SSL errors
+# os.environ["CURL_CA_BUNDLE"] = ""
+# urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 logger = get_logger(__name__)
 
