@@ -9,8 +9,11 @@ from infrastructure.zenml.steps import (
     uc_pipe,
     evaluation_pipe
 )
+from infrastructure.zenml.gitpush_dags.gitpush import git_push
 
 logger = get_logger(__name__)
+DAG_ZIP_PATH="/Users/z460xj/Documents/airflow_localtest/dag_repo/dags" # Change the output path of dag.zip
+# DAG_ZIP_PATH="/Users/z460xj/Documents/airflow_localtest/airflow_docker/dags" # Change the output path of dag.zip
 
 #
 ## Test with AXA CA certificates
@@ -24,7 +27,7 @@ docker_settings = DockerSettings(
 )
 
 airflow_settings = AirflowOrchestratorSettings(
-    dag_output_dir="/Users/z460xj/Documents/airflow_localtest/airflow_docker/dags",  # Change the output path of dag.zip
+    dag_output_dir=DAG_ZIP_PATH,
     # custom_dag_generator="dag_generator_custom", # Don't need this after having axa certs
 )
 
@@ -49,5 +52,6 @@ def automodeling_pipeline(
 
 if __name__ == "__main__":
     automodeling_pipeline(parsing_doc="Axa_Contract2.pdf")
+    git_push()
     # can create other pipelines and cascade them by having the output of 
     # first pipeline to be the the input of second pipeline
