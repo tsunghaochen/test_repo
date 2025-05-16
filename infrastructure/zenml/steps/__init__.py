@@ -7,6 +7,6 @@ from .graph_gen import (
 from .uc import (
     uc_pipe,
 )
-from .validation import (
-    validation_pipe,
+from .evaluation import (
+    evaluation_pipe,
 )

@@ -1,6 +1,6 @@
 from zenml import step
 from zenml.logger import get_logger
-from .apps.parsing_pipeline.parser  import my_parser
+from parsing_pipeline.main  import my_parser
 
 logger = get_logger(__name__)
 

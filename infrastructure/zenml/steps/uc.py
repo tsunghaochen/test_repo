@@ -1,6 +1,6 @@
 from zenml import step
 from zenml.logger import get_logger
-from .apps.uc_pipeline.uc import my_use_case
+from uc_pipeline.main import my_use_case
 # import os
 # import urllib3
 import mlflow

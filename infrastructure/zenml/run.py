@@ -7,7 +7,7 @@ from steps import (
     parsing_pipe,
     graph_gen_pipe,
     uc_pipe,
-    validation_pipe,
+    evaluation_pipe
 )
 
 logger = get_logger(__name__)
@@ -35,7 +35,7 @@ def debug_step():
 @pipeline(settings={"docker": docker_settings, "orchestrator": airflow_settings})
 def automodeling_pipeline(
     parsing_doc: str,
-    uc: str = "Athroing Tool",
+    uc: str = "Athuring Tool",
     validation: str = "LLM_AAJ",
 ):
     """
@@ -45,7 +45,7 @@ def automodeling_pipeline(
     parsed_data = parsing_pipe(parsing_doc)
     knowlege_graph = graph_gen_pipe(parsed_data)
     output = uc_pipe(knowlege_graph, uc)
-    score = validation_pipe(output, validation)
+    score = evaluation_pipe(output, validation)
 
 if __name__ == "__main__":
     automodeling_pipeline(parsing_doc="Axa_Contract2.pdf")
