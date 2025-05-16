@@ -3,7 +3,7 @@ from zenml import pipeline, step
 from zenml.logger import get_logger
 from zenml.config import DockerSettings
 from zenml.integrations.airflow.flavors.airflow_orchestrator_flavor import AirflowOrchestratorSettings
-from steps import (
+from infrastructure.zenml.steps import (
     parsing_pipe,
     graph_gen_pipe,
     uc_pipe,
